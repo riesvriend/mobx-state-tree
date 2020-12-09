@@ -5,10 +5,19 @@
             "type": "node",
             "request": "launch",
             "cwd": "${workspaceRoot}/packages/mobx-state-tree",
-            "name": "debug unit test",
+            "name": "mobx-state-tree debug unit test",
             "program": "${workspaceRoot}/node_modules/jest/bin/jest.js",
             "args": ["-i", "${fileBasename}"],
             "skipFiles": ["<node_internals>/**/*", "${workspaceRoot}/node_modules/**/*"]
-        }
+        },
+        {
+          "type": "node",
+          "request": "launch",
+          "cwd": "${workspaceRoot}/packages/mst-example-bookstore-ts",
+          "name": "mst-example-bookstore-ts debug unit test",
+          "program": "${workspaceRoot}/packages/mst-example-bookstore-ts/node_modules/jest/bin/jest.js",
+          "args": ["-i", "${fileBasename}"],
+          "skipFiles": ["<node_internals>/**/*", "${workspaceRoot}/node_modules/**/*"]
+      }
     ]
 }
